@@ -423,10 +423,18 @@ input[type="reset"] {
   .main-goods-mb {
     display: none;
   }
+
+ .only-mb {
+    display: none;
+  }
 }
 
 /* 1024 이하 */
 @media (width <= 1024px) {
+   .only-mb {
+    display: none;
+  }
+  
   .sec-text {
     font-size: 40px;
   }
@@ -512,6 +520,10 @@ input[type="reset"] {
 
 /* 600 이하 */
 @media (width <= 600px) {
+   .only-mb {
+    display: inline;
+  }
+  
   .header-banner-reservation::before {
     font-size: 60px;
   }
