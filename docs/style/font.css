@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ghanachoco";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Elephant V1";
+  src: url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.eot");
+  src: url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.svg#Elephant V1")
+      format("svg");
+}

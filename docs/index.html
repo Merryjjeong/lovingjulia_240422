@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러빙줄리아 홈페이지 구현</title>
+
+    <!-- 웹사이트가 모바일 장치에서 적절하게 보이고 작동하도록 조절 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 테일윈드 불러오기 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOS 라이브러리 불러오기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 공통 JS 연결 -->
+    <script defer src="./script/script.js"></script>
+
+    <!-- 폰트 적용 -->
+    <link rel="stylesheet" href="style/font.css" />
+
+    <!-- 공통 css 연결 -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-wrap">
+        <div class="header-top-bar" id="headerbar">
+          <div class="top-bar top-bar-pc">
+            <nav class="top-bar-menu">
+              <ul>
+                <li>
+                  <a href="#"
+                    >ABOUT
+                    <ul>
+                      <li>
+                        <a href="#">LOVING JULIA</a>
+                      </li>
+                    </ul></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    onclick="location.href='https://cdpn.io/pen/debug/abxaPOZ?authentication_hash=mWMoNBQPyVBk'"
+                    >MENU</a
+                  >
+                  <ul>
+                    <li>
+                      <a href="#">MEAT</a>
+                    </li>
+                    <li>
+                      <a href="#">PASTA</a>
+                    </li>
+                    <li>
+                      <a href="#">RISOTTO</a>
+                    </li>
+                    <li>
+                      <a href="#">SALAD</a>
+                    </li>
+                    <li>
+                      <a href="#">DRINK</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    onclick="location.href='https://cdpn.io/pen/debug/RwOYEZJ?authentication_hash=nqkwvgQEXNxA'"
+                    >RESERVATION</a
+                  >
+                  <ul>
+                    <li>
+                      <a href="#">TABLE 1</a>
+                    </li>
+                    <li>
+                      <a href="#">TABLE 2</a>
+                    </li>
+                    <li>
+                      <a href="#">TABLE 3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">SOUVENIR</a>
+                </li>
+              </ul>
+              <div class="top-bar-right_btn side-btn">
+                <a href="#">
+                  <i class="fa-solid fa-bars"></i>
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div class="top-bar top-bar-mb">
+            <nav class="top-bar-menu">
+              <div class="flex-1"></div>
+              <div class="top-bar-right_btn side-btn">
+                <a href="#">
+                  <i class="fa-solid fa-bars"></i>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="header-banner">
+          <div class="logo">
+            <a href="#">
+              <img src="https://ifh.cc/g/3H1fdq.png" alt="러빙줄리아 로고" />
+            </a>
+          </div>
+          <div class="header-img">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://ifh.cc/g/s5Jagg.jpg" alt="메인1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://ifh.cc/g/NOvHVx.jpg" alt="메인2" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://ifh.cc/g/LpyF9p.jpg" alt="메인3" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="aside-menu">
+      <div class="aside-menu-left flex-1"></div>
+      <div class="aside-menu-right flex-1">
+        <nav class="tb-right-menu-list">
+          <ul>
+            <li>
+              <a href="#"
+                >ABOUT
+                <ul>
+                  <li>
+                    <a href="#">LOVING JULIA</a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="location.href='https://cdpn.io/pen/debug/abxaPOZ?authentication_hash=mWMoNBQPyVBk'"
+                >MENU</a
+              >
+              <ul>
+                <li>
+                  <a href="#">MEAT</a>
+                </li>
+                <li>
+                  <a href="#">PASTA</a>
+                </li>
+                <li>
+                  <a href="#">RISOTTO</a>
+                </li>
+                <li>
+                  <a href="#">SALAD</a>
+                </li>
+                <li>
+                  <a href="#">DRINK</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="location.href='https://cdpn.io/pen/debug/RwOYEZJ?authentication_hash=nqkwvgQEXNxA'"
+                >RESERVATION</a
+              >
+              <ul>
+                <li>
+                  <a href="#">TABLE 1</a>
+                </li>
+                <li>
+                  <a href="#">TABLE 2</a>
+                </li>
+                <li>
+                  <a href="#">TABLE 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">SOUVENIR</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="tb-right-menu-close">
+          <a href="#"> close </a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-wrap">
+      <div class="main-intro-wrap">
+        <div class="main-intro main-intro-pc">
+          <div class="left-intro flex-1">
+            <p>B</p>
+            <p>o</p>
+            <p>n</p>
+            &nbsp;
+            <p>a</p>
+            <p>p</p>
+            <p>p</p>
+            <p>e</p>
+            <p>t</p>
+            <p>i</p>
+            <p>t</p>
+            <p>!</p>
+          </div>
+          <div class="right-intro flex-1">
+            <p>러빙줄리아는 1인이 운영하는 100%예약제 레스토랑입니다.</p>
+            <p>4인석 테이블 3개로 구성된 아담한 공간이며</p>
+            <p>유럽가정식을 판매하고 있습니다.</p>
+          </div>
+        </div>
+        <div class="main-intro main-intro-mb">
+          <div class="intro-text">
+            <p>
+              러빙줄리아는 1인이 운영하는 100%예약제 레스토랑입니다. <br />
+              4인석 테이블 3개로 구성된 아담한 공간이며 유럽가정식을 판매하고
+              있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main-menu-wrap">
+        <div class="main-menu">
+          <span class="menu-text sec-text"> · Best Menu · </span>
+          <div class="main-menu-list-pc">
+            <div class="main-menu-item main-menu-1">
+              <div
+                class="menu-img flex-1 aos-init"
+                data-aos="fade"
+                data-aos-duration="1000"
+                data-aos-easing="linear"
+              >
+                <img src="https://ifh.cc/g/nldR5L.jpg" alt="메뉴1" />
+              </div>
+              <div class="menu-intro flex-1">
+                <strong
+                  class="aos-init"
+                  data-aos="fade"
+                  data-aos-duration="1000"
+                  data-aos-easing="linear"
+                >
+                  <span>B</span>rown Butter Chicken</strong
+                >
+                <p
+                  class="aos-init"
+                  data-aos="fade"
+                  data-aos-duration="1000"
+                  data-aos-easing="linear"
+                >
+                  브라운 버터에 구워 고소한 크림소스와 바삭바삭한 크리스피
+                  닭다리살 치킨, 느끼함을 잡아줄 레몬소스 레몬버터 치킨 입니다.
+                </p>
+              </div>
+            </div>
+            <div class="main-menu-item main-menu-2">
+              <div class="menu-intro flex-1">
+                <strong
+                  class="aos-init"
+                  data-aos="fade"
+                  data-aos-duration="1000"
+                  data-aos-easing="linear"
+                >
+                  <span>B</span>oeuf Bourguignon</strong
+                >
+                <p
+                  class="aos-init"
+                  data-aos="fade"
+                  data-aos-duration="1000"
+                  data-aos-easing="linear"
+                >
+                  부채살을 사용해 와인을 넣어 장시간 조리하여 육질이 부드러우며,
+                  오레가노, 타임, 딜 등 다양한 허브가 들어가 매혹적인 향과 맛을
+                  느끼실 수 있습니다.
+                </p>
+              </div>
+              <div
+                class="menu-img flex-1 aos-init"
+                data-aos="fade"
+                data-aos-duration="1000"
+                data-aos-easing="linear"
+              >
+                <img src="https://ifh.cc/g/8B7m9o.jpg" alt="메뉴2" />
+              </div>
+            </div>
+            <div class="main-menu-item main-menu-3">
+              <div
+                class="menu-img flex-1 aos-init"
+                data-aos="fade"
+                data-aos-duration="1000"
+                data-aos-easing="linear"
+              >
+                <img src="https://ifh.cc/g/Ms3vWz.jpg" alt="메뉴3" />
+              </div>
+              <div class="menu-intro flex-1">
+                <strong
+                  class="aos-init"
+                  data-aos="fade"
+                  data-aos-duration="1000"
+                  data-aos-easing="linear"
+                >
+                  <span>S</span>hrimp Rose Rissto</strong
+                >
+                <p
+                  class="aos-init"
+                  data-aos="fade"
+                  data-aos-duration="1000"
+                  data-aos-easing="linear"
+                >
+                  크림과 토마토소스의 황금비율로 더 부드럽게 느껴지는 로제소스,
+                  비법소스로 익힌 새우와 갈릭오일로 풍부한 향을 느낄 수
+                  있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="main-menu-list-mb">
+            <div class="main-menu-item main-menu-1">
+              <div class="menu-img">
+                <img src="https://ifh.cc/g/nldR5L.jpg" alt="메뉴1" />
+              </div>
+              <div class="menu-intro">
+                <strong> <span>B</span>rown Butter Chicken</strong>
+                <p>
+                  브라운 버터에 구워 고소한 크림소스와 <br />
+                  바삭바삭한 크리스피 닭다리살 치킨, <br />
+                  느끼함을 잡아줄 레몬소스 레몬버터 치킨 입니다.
+                </p>
+              </div>
+            </div>
+            <div class="main-menu-item main-menu-2">
+              <div class="menu-img">
+                <img src="https://ifh.cc/g/8B7m9o.jpg" alt="메뉴2" />
+              </div>
+              <div class="menu-intro">
+                <strong> <span>B</span>oeuf Bourguignon</strong>
+                <p>
+                  부채살을 사용해 와인을 넣어 장시간 조리하여 <br />
+                  육질이 부드러우며, 오레가노, 타임, 딜 등 다양한 허브가 들어가
+                  <br />
+                  매혹적인 향과 맛을 느끼실 수 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="main-menu-item main-menu-3">
+              <div class="menu-img">
+                <img src="https://ifh.cc/g/Ms3vWz.jpg" alt="메뉴3" />
+              </div>
+              <div class="menu-intro">
+                <strong> <span>S</span>hrimp Rose Rissto</strong>
+                <p>
+                  크림과 토마토소스의 황금비율로 <br />
+                  더 부드럽게 느껴지는 로제소스, 비법소스로 익힌 새우와
+                  갈릭오일로 풍부한 향을 느낄 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-news-wrap">
+        <div class="main-news">
+          <span class="menu-text sec-text"> · Loving Julia's News · </span>
+          <div
+            class="main-news-con aos-init"
+            data-aos="fade"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-sine"
+          >
+            <div class="news-tab-box-1">
+              <ul class="news-tab-box-head h-full">
+                <li class="tab-box-item tab-box-item-1 active">
+                  <a>
+                    <h1>Event</h1>
+                  </a>
+                </li>
+                <li class="tab-box-item tab-box-item-2">
+                  <a>
+                    <h1>News</h1>
+                  </a>
+                </li>
+              </ul>
+              <ul class="news-tab-box-body flex-1 h-full">
+                <li class="tap-box-item tap-box-1__item-1 active">
+                  <div class="news-slider-box event-slider slider-1">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="https://ifh.cc/g/HPsLMG.jpg"
+                            alt="구미 벚꽃 축제"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="https://ifh.cc/g/WmMyWA.jpg"
+                            alt="산책길 마켓"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="https://ifh.cc/g/HPsLMG.jpg"
+                            alt="구미 벚꽃 축제"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="https://ifh.cc/g/WmMyWA.jpg"
+                            alt="산책길 마켓"
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tap-box-item tap-box-1__item-2">
+                  <div class="news-slider-box news-slider slider-2">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <video
+                            width="300px"
+                            src="https://ifh.cc/v/4pyy9K.mp4"
+                            type="video/mp4"
+                            autoplay
+                            controls
+                            muted
+                            playsinline
+                          ></video>
+                        </div>
+                        <div class="swiper-slide">
+                          <video
+                            width="300px"
+                            src="https://ifh.cc/v/5mcrW2.mp4"
+                            type="video/mp4"
+                            autoplay
+                            controls
+                            muted
+                            playsinline
+                          ></video>
+                        </div>
+                        <div class="swiper-slide">
+                          <video
+                            width="300px"
+                            src="https://ifh.cc/v/T2jMo2.mp4"
+                            type="video/mp4"
+                            autoplay
+                            controls
+                            muted
+                            playsinline
+                          ></video>
+                        </div>
+                        <div class="swiper-slide">
+                          <video
+                            width="300px"
+                            src="https://ifh.cc/v/BjRTXq.mp4"
+                            type="video/mp4"
+                            autoplay
+                            controls
+                            muted
+                            playsinline
+                          ></video>
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-sns-wrap">
+        <div class="main-sns">
+          <div
+            class="main-sns-pc aos-init"
+            data-aos="fade"
+            data-aos-duration="1300"
+            data-aos-easing="linear"
+          >
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-house"></i>
+                  BLOG
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                  INSTAGRAM
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                  YOUTUBE
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-sns-mb">
+            <span class="menu-text sec-text"> · SNS · </span>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-house"></i>
+                  <span>blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                  <span>youtube</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-goods-wrap">
+        <div class="main-goods">
+          <span class="menu-text sec-text"> · Souvenir · </span>
+          <div class="main-goods-pc">
+            <div class="main-goods-con">
+              <div
+                class="aos-init mt-[30px]"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-easing="linear"
+              >
+                <img src="https://ifh.cc/g/gcQJ0C.png" alt="지붕" />
+              </div>
+              <div
+                class="goods-container aos-init"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-easing="linear"
+              >
+                <a href="#">
+                  <img src="https://ifh.cc/g/G3fvFj.jpg" alt="굿즈1" />
+                </a>
+                <a href="#">
+                  <img src="https://ifh.cc/g/zQpCmv.jpg" alt="굿즈2" />
+                </a>
+                <a href="#">
+                  <img src="https://ifh.cc/g/9mZadP.jpg" alt="굿즈3" />
+                </a>
+                <a href="#">
+                  <img src="https://ifh.cc/g/M0d8lW.jpg" alt="굿즈4" />
+                </a>
+              </div>
+              <span
+                class="main-goods-btn aos-init"
+                data-aos="fade"
+                data-aos-duration="900"
+                data-aos-easing="linear"
+              >
+                <a class="cursor-pointer"
+                  >다른 아이템 구경가기 <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </span>
+            </div>
+          </div>
+          <div class="main-goods-mb">
+            <div class="main-goods-con">
+              <div class="mt-[30px]">
+                <img src="https://ifh.cc/g/gcQJ0C.png" alt="지붕" />
+              </div>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="https://ifh.cc/g/G3fvFj.jpg" alt="굿즈1" />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="https://ifh.cc/g/zQpCmv.jpg" alt="굿즈2" />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="https://ifh.cc/g/9mZadP.jpg" alt="굿즈3" />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="https://ifh.cc/g/M0d8lW.jpg" alt="굿즈4" />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <span class="main-goods-btn">
+                <a class="cursor-pointer"
+                  >다른 아이템 구경가기 <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="new-pop-up">
+      <div class="popup-wrap popup-wrap-event" id="popup-1">
+        <div class="pop-up-btn">
+          <button class="pop-btn close" id="close">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </div>
+        <div class="pop-up-section">
+          <div class="news-slider-box event-slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://ifh.cc/g/HPsLMG.jpg" alt="구미 벚꽃 축제" />
+                  <div class="pop-up-text">
+                    <p><strong>3.22~3.26 구미 "여기서 다시 봄" 축제</strong></p>
+                    <br />
+                    <p>러빙줄리아가 푸드 페스티벌에 참여합니다.</p>
+                    <br />
+                    <p>많은 관심 부탁 드립니다.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://ifh.cc/g/WmMyWA.jpg" alt="산책길 마켓" />
+                  <div class="pop-up-text">
+                    <p><strong>4.10~4.12 구미 "산책길 마켓"</strong></p>
+                    <br />
+                    <p>밀키트 주문시</p>
+                    <br />
+                    <p>바나나 푸딩을 선물로 드립니다.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://ifh.cc/g/HPsLMG.jpg" alt="구미 벚꽃 축제" />
+                  <div class="pop-up-text">
+                    <p><strong>3.22~3.26 구미 "여기서 다시 봄" 축제</strong></p>
+                    <br />
+                    <p>러빙줄리아가 푸드 페스티벌에 참여합니다.</p>
+                    <br />
+                    <p>많은 관심 부탁 드립니다.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://ifh.cc/g/WmMyWA.jpg" alt="산책길 마켓" />
+                  <div class="pop-up-text">
+                    <p><strong>4.10~4.12 구미 "산책길 마켓"</strong></p>
+                    <br />
+                    <p>밀키트 주문시</p>
+                    <br />
+                    <p>바나나 푸딩을 선물로 드립니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-wrap popup-wrap-news" id="popup-2">
+        <div class="pop-up-btn">
+          <button class="pop-btn close" id="close">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </div>
+        <div class="pop-up-section">
+          <div class="news-slider-box news-slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <video
+                    width="500px"
+                    src="https://ifh.cc/v/4pyy9K.mp4"
+                    type="video/mp4"
+                    autoplay
+                    controls
+                    muted
+                    playsinline
+                  ></video>
+                </div>
+                <div class="swiper-slide">
+                  <video
+                    width="500px"
+                    src="https://ifh.cc/v/5mcrW2.mp4"
+                    type="video/mp4"
+                    autoplay
+                    controls
+                    muted
+                    playsinline
+                  ></video>
+                </div>
+                <div class="swiper-slide">
+                  <video
+                    width="500px"
+                    src="https://ifh.cc/v/T2jMo2.mp4"
+                    type="video/mp4"
+                    autoplay
+                    controls
+                    muted
+                    playsinline
+                  ></video>
+                </div>
+                <div class="swiper-slide">
+                  <video
+                    width="500px"
+                    src="https://ifh.cc/v/BjRTXq.mp4"
+                    type="video/mp4"
+                    autoplay
+                    controls
+                    muted
+                    playsinline
+                  ></video>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="foot-bar">
+        <div class="foot-bar-header">
+          <ul>
+            <li>
+              <a href="#"> 러빙줄리아 </a>
+            </li>
+            <li>
+              <a href="#"> 개인정보취급방법 </a>
+            </li>
+          </ul>
+        </div>
+        <div class="foot-bar-body">
+          <div class="foot-bar-logo">
+            <img src="https://ifh.cc/g/bGBahS.png" alt="러빙줄리아 풋바 로고" />
+          </div>
+          <div class="foot-bar-text">
+            <p>
+              경북 구미시 금오산로10길 8 1층 러빙줄리아 <br />
+              전화번호 0507-1353-7859 <br />
+              영업시간 11:35 - 21:00 / <br class="only-mb" />
+              15:00 - 17:30 브레이크타임 (매주 월요일 휴무)
+            </p>
+            <p class="foot-bar-copyright">
+              <strong
+                >Copyright 2024© CHOISOJEONG. <br class="only-mb" />
+                All Right Reserved</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

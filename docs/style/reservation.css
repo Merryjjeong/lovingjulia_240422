@@ -1,0 +1,554 @@
+/* 폰트 적용 */
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ghanachoco";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Elephant V1";
+  src: url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.eot");
+  src: url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/76e4f7ec874825c077cc2961142f102c.svg#Elephant V1")
+      format("svg");
+}
+
+/* 라이브러리 */
+:root {
+  --max-width: 1300px;
+  --top-bar-height: 40px;
+  --top-bar-color: #fff;
+  --header-banner-height: 600px;
+  --font-color: #272226;
+  --strong-color: #d82f42;
+  --bg-color: #ffebb6;
+  --circle-color: #ffd25e;
+}
+
+html > body {
+  font-family: "NanumSquareRound";
+  background-color: #ffebb6;
+  color: var(--font-color);
+}
+
+footer {
+  height: 400px;
+  width: 100%;
+  background-color: #86a4be;
+  color: #fff;
+}
+
+/* 섹션 텍스트*/
+.sec-text {
+  display: inline-block;
+  width: 100%;
+  font-family: "Elephant", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: #7c5324;
+  margin-top: 50px;
+}
+
+/* 스와이퍼 버튼  */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #272226 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+/* 커스텀  */
+/* 헤더 */
+.header {
+  position: relative;
+}
+
+.header-top-bar {
+  /* 	border: 1px solid white; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.header-top-bar:hover {
+  transition-duration: 0.5s;
+  background-color: rgba(124, 83, 36, 0.8);
+}
+
+.header-top-bar.fixed {
+  background-color: rgba(124, 83, 36, 0.8);
+  /*  opacity:0.5; */
+}
+
+.top-bar {
+  display: flex;
+  position: relative;
+  height: var(--top-bar-height);
+}
+
+.top-bar .top-bar-menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* 	border: 1px solid red; */
+}
+
+.top-bar .top-bar-menu > ul > li {
+  display: inline-block;
+  height: var(--top-bar-height);
+  width: 150px;
+  text-align: center;
+  line-height: var(--top-bar-height);
+  /* 	border: 1px solid black; */
+}
+
+.top-bar .top-bar-menu ul > li > a {
+  display: block;
+  height: inherit;
+  color: #f9f9f9;
+  /* 	border: 1px solid red; */
+}
+
+/* 2번 메뉴 구현 */
+.top-bar-menu > ul {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  /* 		border: 1px solid red; */
+}
+
+.top-bar-menu ul > li {
+  display: relative;
+  width: 160px;
+  height: 50px;
+  /* 	border: 1px solid red; */
+}
+
+.top-bar-menu ul > li:hover > a {
+  background-color: rgba(124, 83, 36, 0.8);
+  /* 	font-weight: bold; */
+}
+
+.top-bar-menu > ul ul {
+  display: none;
+}
+
+.top-bar-menu ul ul li {
+  background-color: rgba(124, 83, 36, 0.8);
+  width: 100%;
+  height: inherit;
+}
+
+.top-bar-right {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.top-bar-right_btn {
+  height: 100%;
+}
+
+.top-bar-right_btn > a {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+  color: #fff;
+}
+
+/* 사이드 메뉴 구현 */
+.aside-menu {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.aside-menu.active {
+  opacity: 1;
+  transition-duration: 0.5s;
+  z-index: 30;
+}
+
+.aside-menu-left {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.aside-menu-right {
+  background-color: rgba(124, 83, 36, 0.8);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  height: 100vh;
+  width: 400px;
+}
+
+.tb-right-menu-list > ul ul {
+  display: none;
+  transition-duration: 0.5s;
+}
+
+.tb-right-menu-list > ul > li:hover > ul {
+  display: block;
+  transition-duration: 0.5s;
+}
+
+.tb-right-menu-list > ul > li > a {
+  font-size: 25px;
+}
+
+.tb-right-menu-list ul > li {
+  font-size: 20px;
+  margin: 5px 15px 0;
+  text-align: end;
+}
+
+.tb-right-menu-list ul > li:hover > a {
+  text-shadow: 0 0 3px #fff;
+}
+
+.tb-right-menu-close {
+  margin: 15px;
+  text-align: end;
+}
+
+.tb-right-menu-close:hover > a {
+  text-shadow: 0 0 10px #fff;
+}
+
+/* 예약 페이지 구현 */
+.header-banner-reservation {
+  position: relative;
+  width: 100%;
+  z-index: -10;
+}
+
+.header-banner-reservation::before {
+  content: "· Reservation ·";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-size: 80px;
+  font-family: "Elephant V1";
+  color: #fff;
+  z-index: 100;
+  /* 	border: 1px solid red; */
+}
+
+.header-banner-reservation > img {
+  /* 	position: absolute; */
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  height: 350px;
+  /* 	border: 1px solid red; */
+}
+
+/* 예약 페이지 구현 */
+.reservation-table-list {
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+  max-width: var(--max-width);
+}
+
+.table-list {
+  width: 750px;
+  margin: 20px;
+}
+
+.table-list .swiper-slide {
+  display: block;
+  text-align: center;
+}
+
+.table-list .swiper-slide img {
+  border: 30px solid #7c5324;
+  border-radius: 15%;
+  overflow: hidden;
+  object-fit: cover;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+
+.table-list .swiper-slide p {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.table-list .swiper-slide span {
+  color: var(--strong-color);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #272226 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-top: -100px;
+}
+
+.reservation-table {
+  font-size: 18px;
+  width: 500px;
+  margin-top: -70px;
+}
+
+.reservation-table legend {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.reservation-table input,
+select {
+  background-color: transparent;
+  border: 1px solid #7c5324;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 60px;
+  height: 30px;
+}
+
+/* 풋바 구현 */
+.foot-bar {
+  margin: auto;
+  height: 100%;
+}
+
+.foot-bar-header {
+  float: right;
+}
+
+.foot-bar-header > ul {
+  display: flex;
+  margin: 20px 0;
+}
+
+.foot-bar-header > ul > li > a {
+  margin: 10px 15px;
+}
+
+.foot-bar-body {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot-bar-logo {
+  width: 250px;
+}
+
+.foot-bar-logo > img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.foot-bar-text {
+  font-size: 18px;
+  margin-left: 100px;
+  /* 	border: 1px solid blue; */
+}
+
+.foot-bar-copyright {
+  margin-top: 10px;
+}
+
+/* 반응형 구현 */
+/* 1024 초과*/
+@media (1024px < width) {
+  .top-bar-mb {
+    display: none;
+  }
+
+  .main-intro-mb {
+    display: none;
+  }
+
+  .main-menu-list-mb {
+    display: none;
+  }
+
+  .main-sns-mb {
+    display: none;
+  }
+
+  .main-goods-mb {
+    display: none;
+  }
+}
+
+/* 1024 이하 */
+@media (width <= 1024px) {
+  .sec-text {
+    font-size: 40px;
+  }
+
+  .top-bar-pc {
+    display: none;
+  }
+
+  .main-menu-list-mb {
+    display: none;
+  }
+
+  .main-sns-mb {
+    display: none;
+  }
+
+  .main-goods-mb {
+    display: none;
+  }
+
+  .header-banner {
+    width: 100%;
+    height: 380px;
+  }
+
+  .header-banner .logo img {
+    height: 170px;
+    transform: translateY(-30px);
+  }
+
+  .header-banner .header-img img {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .aside-menu-right {
+    width: 250px;
+  }
+
+  .reservation-table-list {
+    flex-direction: column;
+  }
+
+  .table-list {
+    width: 80%;
+  }
+
+  .table-list .swiper-slide img {
+    width: 450px;
+    height: 450px;
+  }
+
+  .table-list .swiper-slide p {
+    font-size: 18px;
+  }
+
+  .reservation-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 400px;
+  }
+
+  .foot-bar-body {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+  }
+
+  .foot-bar-logo > img {
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .foot-bar-text {
+    font-size: 15px;
+    margin-left: 40px;
+  }
+}
+
+/* 600 이하 */
+@media (width <= 600px) {
+  .header-banner-reservation::before {
+    font-size: 60px;
+  }
+
+  .table-list {
+    width: 80%;
+  }
+
+  .table-list .swiper-slide img {
+    width: 250px;
+    height: 250px;
+    border: 5px solid #7c5324;
+  }
+
+  .table-list .swiper-slide p {
+    font-size: 15px;
+  }
+
+  .reservation-table {
+    width: 300px;
+  }
+
+  .foot-bar-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .foot-bar-logo {
+    margin: -50px auto 0 50px;
+  }
+
+  .foot-bar-logo > img {
+    height: 150px;
+  }
+
+  .foot-bar-font > p {
+    font-size: 13px;
+  }
+}

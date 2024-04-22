@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러빙줄리아 홈페이지 2번 메뉴 - 메뉴 구현</title>
+
+    <!-- 웹사이트가 모바일 장치에서 적절하게 보이고 작동하도록 조절 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 테일윈드 불러오기 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOS 라이브러리 불러오기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 공통 JS 연결 -->
+    <script defer src="./script/script.js"></script>
+
+    <!-- 폰트 적용 -->
+    <link rel="stylesheet" href="style/font.css" />
+
+    <!-- 공통 css 연결 -->
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/menu.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-wrap">
+        <div class="header-top-bar" id="headerbar">
+          <div class="top-bar top-bar-pc">
+            <nav class="top-bar-menu">
+              <ul>
+                <li>
+                  <a href="#"
+                    >ABOUT
+                    <ul>
+                      <li>
+                        <a href="#">LOVING JULIA</a>
+                      </li>
+                    </ul></a
+                  >
+                </li>
+                <li>
+                  <a href="./menu.html">MENU</a>
+                  <ul>
+                    <li>
+                      <a href="#">MEAT</a>
+                    </li>
+                    <li>
+                      <a href="#">PASTA</a>
+                    </li>
+                    <li>
+                      <a href="#">RISOTTO</a>
+                    </li>
+                    <li>
+                      <a href="#">SALAD</a>
+                    </li>
+                    <li>
+                      <a href="#">DRINK</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="./reservation.html">RESERVATION</a>
+                  <ul>
+                    <li>
+                      <a href="#">TABLE 1</a>
+                    </li>
+                    <li>
+                      <a href="#">TABLE 2</a>
+                    </li>
+                    <li>
+                      <a href="#">TABLE 3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">SOUVENIR</a>
+                </li>
+              </ul>
+              <div class="top-bar-right_btn side-btn">
+                <a href="#">
+                  <i class="fa-solid fa-bars"></i>
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div class="top-bar top-bar-mb">
+            <nav class="top-bar-menu">
+              <div class="flex-1"></div>
+              <div class="top-bar-right_btn side-btn">
+                <a href="#">
+                  <i class="fa-solid fa-bars"></i>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="header-banner-menu">
+          <img src="https://ifh.cc/g/rr3Mrn.jpg" alt="menu-img" />
+        </div>
+      </div>
+    </header>
+
+    <aside class="aside-menu">
+      <div class="aside-menu-left"></div>
+      <div class="aside-menu-right">
+        <nav class="tb-right-menu-list">
+          <ul>
+            <li>
+              <a href="#"
+                >ABOUT
+                <ul>
+                  <li>
+                    <a href="#">LOVING JULIA</a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="./menu.html">MENU</a>
+              <ul>
+                <li>
+                  <a href="#">MEAT</a>
+                </li>
+                <li>
+                  <a href="#">PASTA</a>
+                </li>
+                <li>
+                  <a href="#">RISOTTO</a>
+                </li>
+                <li>
+                  <a href="#">SALAD</a>
+                </li>
+                <li>
+                  <a href="#">DRINK</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./reservation.html">RESERVATION</a>
+              <ul>
+                <li>
+                  <a href="#">TABLE 1</a>
+                </li>
+                <li>
+                  <a href="#">TABLE 2</a>
+                </li>
+                <li>
+                  <a href="#">TABLE 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">SOUVENIR</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="tb-right-menu-close">
+          <a href="#"> close </a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-wrap">
+      <div class="menu-list">
+        <div class="menu-sec-list">
+          <p><span>M</span>eat</p>
+          <div class="swiper menu-meat">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div>
+                  <img src="https://ifh.cc/g/jFlTF1.jpg" alt="뵈프부르기뇽" />
+                  <p class="font-bold">뵈프 부르기뇽</p>
+                  <p>30,000원</p>
+                  <p>
+                    레드와인에 장시간 조리해서 부드러운 <br />
+                    소고기스튜와 치-즈매쉬포테이토
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <img src="https://ifh.cc/g/FMgl20.jpg" alt="브라운버터치킨" />
+                  <p class="font-bold">브라운 버터 치킨</p>
+                  <p>24,000원</p>
+                  <p>
+                    버터에 구워 크리스피한 닭다리살과 <br />
+                    고소한 베샤멜과 레몬버터~~
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <p><span>P</span>asta</p>
+          <div class="swiper menu-pasta">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div>
+                  <img
+                    src="https://ifh.cc/g/ZKhAkR.jpg"
+                    alt="우삼겹깻잎크림파스타"
+                  />
+                  <p class="font-bold">우삼겹 깻잎 크림 파스타</p>
+                  <p>18,000원</p>
+                  <p>
+                    수제 깻잎페스토로 만든 깻잎크림과 <br class="only-mb" />
+                    꼬불꼬불 식감 <br />
+                    좋은 마팔디네면, 발사믹에 졸인 우삼겹
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <img
+                    src="https://ifh.cc/g/gc2X1Z.jpg"
+                    alt="버섯크림과구운뇨끼"
+                  />
+                  <p class="font-bold">버섯크림과 구운뇨끼</p>
+                  <p>19,000원</p>
+                  <p>
+                    매일 아침 반죽하는 감자뇨끼와 <br />
+                    트러플향이 좋은 버섯크림소스
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <img
+                    src="https://ifh.cc/g/jCYApb.jpg"
+                    alt="쉬림프비스크오일파스타"
+                  />
+                  <p class="font-bold">쉬림프 비스크 오일 파스타</p>
+                  <p>18,000원</p>
+                  <p>새우의 향이 풍부한 비스크소스로 만든 오일파스타</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <img src="https://ifh.cc/g/joOsR4.jpg" alt="라구리가토니" />
+                  <p class="font-bold">라구 리가토니</p>
+                  <p>19,000원</p>
+                  <p>매콤한 라구소스와 리가토니 파스타, 치즈 감자.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot-bar">
+        <div class="foot-bar-header">
+          <ul>
+            <li>
+              <a href="#"> 러빙줄리아 </a>
+            </li>
+            <li>
+              <a href="#"> 개인정보취급방법 </a>
+            </li>
+          </ul>
+        </div>
+        <div class="foot-bar-body">
+          <div class="foot-bar-logo">
+            <img src="https://ifh.cc/g/bGBahS.png" alt="러빙줄리아 풋바 로고" />
+          </div>
+          <div class="foot-bar-text">
+            <p>
+              경북 구미시 금오산로10길 8 1층 러빙줄리아 <br />
+              전화번호 0507-1353-7859 <br />
+              영업시간 11:35 - 21:00 / <br class="only-mb" />
+              15:00 - 17:30 브레이크타임 (매주 월요일 휴무)
+            </p>
+            <p class="foot-bar-copyright">
+              <strong
+                >Copyright 2024© CHOISOJEONG. <br class="only-mb" />
+                All Right Reserved</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
