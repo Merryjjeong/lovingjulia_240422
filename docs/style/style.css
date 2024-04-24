@@ -1,4 +1,3 @@
-/* 라이브러리 */
 :root {
   --max-width: 1300px;
   --top-bar-height: 40px;
@@ -14,13 +13,6 @@ html > body {
   font-family: "NanumSquareRound";
   background-color: #ffebb6;
   color: var(--font-color);
-}
-
-footer {
-  height: 400px;
-  width: 100%;
-  background-color: #86a4be;
-  color: #fff;
 }
 
 /* 섹션 텍스트*/
@@ -325,7 +317,7 @@ footer {
 }
 
 .main-menu .main-menu-item::before {
-  content: url("https://ifh.cc/g/pfj0fN.png");
+  content: url("/image/plate-img.png");
   position: absolute;
   z-index: -10;
 }
@@ -739,45 +731,51 @@ div[id^="popup-"].active {
 }
 
 /* 풋바 구현 */
-.foot-bar {
-  margin: auto;
-  height: 100%;
-  max-width: var(--max-width);
+footer {
+  width: 100%;
+  background-color: #86a4be;
+  color: #fff;
 }
 
-.foot-bar-header {
-  float: right;
+.foot-bar {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  background-color: #86a4be;
+  color: #fff;
+  padding: 25px 0;
 }
 
 .foot-bar-header > ul {
   display: flex;
-  margin: 20px 0;
+  justify-content: flex-end;
 }
 
-.foot-bar-header > ul > li > a {
-  margin: 10px 15px;
+.foot-bar-header > ul > li {
+  margin: 0 15px;
 }
 
 .foot-bar-body {
   display: flex;
-  height: 100%;
+  width: 100%;
+  height: 300px;
   justify-content: center;
   align-items: center;
 }
 
 .foot-bar-logo {
-  width: 250px;
+  padding-left: 50px;
 }
 
 .foot-bar-logo > img {
-  object-fit: cover;
+  width: 250px;
+  object-fit: contain;
   overflow: hidden;
 }
 
 .foot-bar-text {
+  flex: 1;
   font-size: 18px;
-  margin-left: 100px;
-  /* 	border: 1px solid blue; */
+  padding: 0 50px;
 }
 
 .foot-bar-copyright {
@@ -954,20 +952,8 @@ div[id^="popup-"].active {
     overflow: hidden;
   }
 
-  .foot-bar-body {
-    margin: auto;
-    width: 80%;
-    height: 80%;
-  }
-
   .foot-bar-logo > img {
-    height: 200px;
-    object-fit: cover;
-    overflow: hidden;
-  }
-  .foot-bar-text {
-    font-size: 15px;
-    margin-left: 40px;
+    width: 200px;
   }
 }
 
@@ -1175,21 +1161,34 @@ div[id^="popup-"].active {
     font-size: 15px;
   }
 
+  .foot-bar {
+    padding: 15px 0;
+  }
+
+  .foot-bar-header {
+    font-size: 12px;
+  }
+
   .foot-bar-body {
-    display: flex;
     flex-direction: column;
-    width: 100%;
+    text-align: center;
   }
 
   .foot-bar-logo {
-    margin: -50px auto 0 50px;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
   }
 
   .foot-bar-logo > img {
-    height: 150px;
+    max-height: 100px;
   }
 
-  .foot-bar-font > p {
+  .foot-bar-text {
+    flex: 0;
+  }
+
+  .foot-bar-text > p {
     font-size: 13px;
   }
 }
